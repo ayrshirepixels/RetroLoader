@@ -94,41 +94,6 @@ Nothing since has needed a fifth.
 Nothing copyrighted is bundled. No character ROM, no BIOS image, no
 manufacturer's font.
 
-- **Teletext and VT100 are the cleanest.** The teletext repertoire is an
-  ETSI standard rather than any vendor's ROM, its 2x3 mosaic graphics are
-  generated from first principles in `fontutil.ts`, and the VT100 theme
-  borrows neither palette nor glyphs — the box-drawing characters are
-  synthesised from an up/down/left/right mask.
-- **The DOS theme invents its BIOS strings.** No vendor's POST text is
-  reproduced. For a real 8x16 CP437 font, VileR's Ultimate Oldschool PC
-  Font Pack is Creative Commons and drops straight into `buildFont()`.
-- **Spectrum and C64 borrow letterforms** from the +2 recreation's 8x8
-  set, which is the one thing across the whole plugin worth checking the
-  provenance of before shipping.
-
-I'm not a lawyer, and the font licences above are worth verifying rather
-than taking on trust.
-
-## Known gaps
-
-- **Every theme uses the Spectrum 8x8 letterforms**, scaled. The C64 is
-  not PETSCII, the DOS theme is not CP437, and teletext is not the ETSI
-  face. `fontutil.ts` is where a real bitmap would go; nothing else needs
-  touching.
-- **Block counts in the C64 directory are invented.** A 1541 held 664
-  blocks; nothing in a modern library would fit on one. The figure is
-  scaled to look right and stay monotonic with real size.
-- **Load timing is untested against real Deck frame pacing.** The
-  animation is driven off `performance.now()` rather than frame count, so
-  it should hold, but it has not been measured on hardware.
-- Decky cannot replace the Deck's shell, so this is a route you navigate
-  to from Quick Access, not a boot screen. It covers the display with a
-  fixed-position layer rather than injecting CSS into Steam's own classes,
-  which is uglier in theory and far less likely to break on a client
-  update.
-- The display is a single canvas, so there are no DOM rows for Steam to
-  focus. Navigation reads raw gamepad buttons from one `Focusable`.
-
 ## Credits
 
 Built on two earlier Ayrshire Pixels projects: the ZX Spectrum +2 OS
