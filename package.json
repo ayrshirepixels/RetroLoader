@@ -1,0 +1,8 @@
+{
+  "name": "retro-loader",
+  "version": "0.3.2",
+  "description": "A retro boot menu for the Steam Deck. Five machines, one launcher.",
+  "author": "Ayrshire Pixels",
+  "license": "BSD-3-Clause",
+  "type": "module"
+}

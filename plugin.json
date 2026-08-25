@@ -1,0 +1,11 @@
+{
+  "name": "Retro Loader",
+  "author": "Ayrshire Pixels",
+  "flags": [],
+  "api_version": 1,
+  "publish": {
+    "tags": ["library", "fun", "theme"],
+    "description": "Turns the Deck into an 8-bit boot menu. Pick a game from a text catalogue, watch the loading screen, then it launches. Five machines: ZX Spectrum +2, Commodore 64, MS-DOS, Teletext and VT100 - each truncating your game names the way that machine actually did. Themes are pluggable.",
+    "image": "https://raw.githubusercontent.com/ayrshirepixels/retro-loader/main/assets/thumbnail.png"
+  }
+}
